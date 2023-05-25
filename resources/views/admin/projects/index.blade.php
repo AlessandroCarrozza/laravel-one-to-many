@@ -7,8 +7,8 @@
       <tr>
         <th scope="col">ID</th>
         <th scope="col">Titolo</th>
-        {{-- <th scope="col">Contenuto</th> --}}
         <th scope="col">Slug</th>
+        <th scope="col">Tipo</th> 
         <th scope="col">Actions</th>
       </tr>
     </thead>
@@ -17,8 +17,8 @@
       <tr>
         <th scope="row">{{$project->id}}</th>
         <th scope="row">{{$project->title}}</th>
-        {{-- <td>{{$project->content}}</td> --}}
         <td>{{$project->slug}}</td>
+        <td>{{$project->type?->name}}</td>
         <td class="d-flex">
             <a href="{{route("admin.projects.show", ["project" => $project->slug])}}" type="button" class="btn btn-primary m-1">Vedi</a>
             <a href="{{route("admin.projects.edit", ["project" => $project->slug])}}" type="button" class="btn btn-warning m-1">Modifica</a>
