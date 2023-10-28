@@ -31,6 +31,7 @@ class ProjectController extends Controller
     public function create()
     {
         $types = Type::all();
+        // dd($types);
         return view("admin.projects.create", compact("types"));
     }
 
@@ -59,6 +60,8 @@ class ProjectController extends Controller
      */
     public function show(Project $project)
     {
+
+        // dd($project);
         return view("admin.projects.show", compact("project"));
     }
 
